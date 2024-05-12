@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="jstyle3.css">
+</head>
+<body>
+    <header>
+        <div class="header_content" style="align-items: center;">
+            <div class="header_title">
+                <h1>John Productions</h1>
+        
+                <div class="navigation-bar">
+                    <ul>
+                        <li>
+                            <a href="main.html">Back to main</a>
+                            <a href="products.html">Productions</a>
+                            <a href="Learndesign.html">Learn Design</a>
+                            <a href="Hire me.html">Hire me</a>
+                            <a href="Login.html">Log in</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+    </header>
+    
+    <main class="intro-animation">
+        <section class="showoff">
+            <h1>Our Products</h1>
+            <input type="text" id="search" placeholder="Search products...">
+            <nav>
+                <ul>
+                    <li><a href="#stickers">Stickers</a></li>
+                    <li><a href="#posters">Posters</a></li>
+                    <li><a href="#shirts">Shirts</a></li>
+                    <li><a href="#hoodies">Hoodies</a></li>
+                    <li><a href="#logos">Logos</a></li>
+                    <li><a href="#digital-marketing">Digital Marketing</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="products_holder">
+            <div id="products">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </section>
+            <hr>    
+        <section class="special_order">
+            <p>Send Me Your Special Order</p>
+            <div class="form" id="Contact">
+                <form action="/action_page.php">
+                    <input type="text" id="Mail" name="Mail" placeholder="Your Email"><br>
+                    <input type="text" id="Name" name="name" placeholder="Your Name"><br>
+                    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+                    <input type="submit" value="Send">
+                </form>
+              </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-footer">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <div class="internal-links">
+                <ul>
+                    <li>
+                        <a href="main.html">Back to main</a>
+                        <a href="products.html">Productions</a>
+                        <a href="Learndesign.html">Learn Design</a>
+                        <a href="Hire me.html">Hire me</a>
+                        <a href="Login.html">Log in</a>
+                        <a href="agent.html">Private Agent</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; John Dhouibi. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+       
+        const products = [
+            { name: "Sticker Set", category: "Stickers", price: "$10", image: "products/the weekend.png"},
+            { name: "Graphic Tee", category: "Shirts", price: "$25", image: "products/shirt.png" },
+            { name: "Hoodie",id: "hoodie", category: "Hoodies", price: "$35", image: "products/hoodie.png" },
+            { name: "Custom Logo Design", category: "Logos", price: "Contact for price", image: "images/logo.PNG" },
+            { name: "Digital Marketing Package", category: "Digital Marketing", price: "Contact for price", image: "images/im2.JPG" },
+        ];
+        
+      
+        function renderProducts(products) {
+            const productsContainer = document.getElementById("products");
+            productsContainer.innerHTML = "";
+
+            products.forEach(product => {
+                const productCard = document.createElement("div");
+                productCard.classList.add("product-card");
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <h2>${product.name}</h2>
+                    <p>Category: ${product.category}</p>
+                    <p>Price: ${product.price}</p>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+        }
+
+       
+        renderProducts(products);
+
+        const searchInput = document.getElementById("search");
+        searchInput.addEventListener("input", () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(searchTerm) || product.category.toLowerCase().includes(searchTerm)
+            );
+            renderProducts(filteredProducts);
+        });
+    </script>
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        
+        document.body.classList.add("animation-active");
+    });
+    
+      </script>
+</body>
+</html>

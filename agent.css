@@ -1,0 +1,243 @@
+/* CSS for intro animation */
+.intro-animation header,
+.intro-animation main,
+.intro-animation footer {
+    opacity: 0;
+    transform: translateY(20px); /* Example: move content 20px down */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.intro-animation.animation-active header,
+.intro-animation.animation-active main,
+.intro-animation.animation-active footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+/* Header Styling */
+header {
+    background-color: #e0d9d9; /* Light gray */
+    padding: 20px;
+}
+
+.header_content {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_title {
+    text-align: center;
+}
+
+.header_title h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #333; 
+}
+
+.navigation-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+}
+
+.navigation-bar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navigation-bar ul li a {
+    font-family: "Super Bloom", cursive; 
+    text-decoration: none;
+    color: #333;
+    margin-left: 15px;
+}
+
+.navigation-bar ul li a:hover {
+    color: #d61919; /* Dark red on hover */
+}
+
+.logo img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+    margin: 30px;
+}
+
+
+/***************************************************************************/
+/* Style for sectoin1 */
+.sectoin1 {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fbbdbd; /* Light gray background */
+    border-radius: 10px;
+}
+
+.sectoin1 .intro {
+    text-align: center;
+}
+
+.sectoin1 .title {
+    font-size: 30px; /* Increase font size */
+  
+}
+
+.sectoin1 .text {
+    text-align: left;
+   
+    margin-left: 50px;
+}
+
+.sectoin1 .text ol {
+    padding-left: 20px;
+}
+
+.sectoin1 .text ol li {
+    margin-bottom: 10px;
+}
+
+/* Style for section2 */
+.section2 {
+    padding: 20px;
+}
+
+.section2 .grid-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center;
+}
+
+.section2 .grid {
+    flex: 0 0 30%; /* Each grid takes 30% width */
+    margin: 10px;
+    position: relative;
+}
+
+.section2 .grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.section2 .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.section2 .content:hover {
+    opacity: 1;
+}
+
+.section2 .content h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section2 .content p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.section2 .content a {
+    display: block;
+    background-color: #d61919; /* Dark red button */
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.section2 .content a:hover {
+    background-color: #891b1b; /* Dark red on hover */
+}
+/*************************************************************************/
+
+.section3 {
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    width: 40%;
+    height: 300px;
+    
+}
+
+.container {
+    background-color: rgba(249, 172, 172, 0.192); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Background blur */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.txt-container {
+    text-align: center;
+}
+/************************************************************************/
+/****************footer*****************/
+footer {
+    background-color: #f5cece; /* Light gray */
+    color: #333; /* Dark gray text */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-footer img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+}
+
+.internal-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.internal-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.internal-links ul li:last-child {
+    margin-right: 0;
+}
+
+.internal-links ul li a {
+    color: #333; /* Dark gray text */
+    text-decoration: none;
+}
+
+.internal-links ul li a:hover {
+    color: #d61919; /* Dark red on hover */
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+/* Example of a media query for smaller devices */
+@media only screen and (max-width: 600px) {
+    /* CSS rules specific to smaller devices */
+}

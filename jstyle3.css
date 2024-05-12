@@ -1,0 +1,262 @@
+/* CSS for intro animation */
+.intro-animation header,
+.intro-animation main,
+.intro-animation footer {
+    opacity: 0;
+    transform: translateY(20px); /* Example: move content 20px down */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.intro-animation.animation-active header,
+.intro-animation.animation-active main,
+.intro-animation.animation-active footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+/* Header Styling */
+header {
+    background-color: #e0d9d9; /* Light gray */
+    padding: 20px;
+}
+
+.header_content {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_title {
+    text-align: center;
+}
+
+.header_title h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #333; /* Dark gray */
+}
+
+.navigation-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center the navigation links */
+}
+
+.navigation-bar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navigation-bar ul li a {
+    font-family: "Super Bloom", cursive; /* Using Super Bloom font */
+    text-decoration: none;
+    color: #333; /* Dark gray */
+}
+
+.navigation-bar ul li a:hover {
+    color: #d61919; /* Dark red on hover */
+}
+
+.logo img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+    margin: 30px;
+}
+/*************************************************/
+/* Add styles for product images */
+.product-image {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 10px; /* Add space between images */
+}
+
+/* Add styles for product cards */
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h2 {
+    margin-top: 0;
+}
+
+.product-card p {
+    margin: 5px 0;
+}
+/*************************************************/
+.showoff {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#search {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Yellow Bricks", sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    font-family: "Yellow Bricks", sans-serif;
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    color: #d61919;
+}
+/**************************************************/
+.products_holder {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.product-card {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ff9999; /* Light red border */
+    border-radius: 5px;
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-card h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px; /* Add space between products and footer */
+}
+/************************************************/
+.special_order {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.special_order p {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: cursive;
+    color: #e40909; /* Red */
+}
+
+.special_order .form {
+    margin-top: 20px;
+}
+
+.special_order input[type="text"],
+.special_order textarea,
+.special_order input[type="submit"] {
+    width: 40%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #f50c0c; /* Red */
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #f3dbd6; /* Red */
+}
+
+.special_order input[type="submit"] {
+    background-color: #b90505; /* Red */
+    color: white;
+    cursor: pointer;
+}
+
+.special_order input[type="submit"]:hover {
+    background-color: #7e0206; /* Darker red on hover */
+}
+
+
+/*************************************************/
+/* Footer Styling */
+footer {
+    background-color: #f5cece; /* Light gray */
+    color: #333; /* Dark gray text */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-footer img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+    margin: 30px;
+}
+
+.internal-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.internal-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.internal-links ul li:last-child {
+    margin-right: 0;
+}
+
+.internal-links ul li a {
+    color: #333; /* Dark gray text */
+    text-decoration: none;
+}
+
+.internal-links ul li a:hover {
+    color: #d61919; /* Dark red on hover */
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+/* Example of a media query for smaller devices */
+@media only screen and (max-width: 600px) {
+    /* CSS rules specific to smaller devices */
+}

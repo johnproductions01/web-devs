@@ -1,0 +1,327 @@
+/* CSS for intro animation */
+.intro-animation header,
+.intro-animation main,
+.intro-animation footer {
+    opacity: 0;
+    transform: translateY(20px); /* Example: move content 20px down */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.intro-animation.animation-active header,
+.intro-animation.animation-active main,
+.intro-animation.animation-active footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+/* Header Styling */
+header {
+    background-color: #e0d9d9; /* Light gray */
+    padding: 20px;
+}
+
+.header_content {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_title {
+    text-align: center;
+}
+
+.header_title h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #333; 
+}
+
+.navigation-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+}
+
+.navigation-bar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navigation-bar ul li a {
+    font-family: "Super Bloom", cursive; 
+    text-decoration: none;
+    color: #333; /* Dark gray */
+    margin-left: 15px;
+}
+
+.navigation-bar ul li a:hover {
+    color: #d61919; /* Dark red on hover */
+}
+
+.logo img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+    margin: 30px;
+}
+/****************************************************/
+.section1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.section1 h1 {
+    font-size: 24px;
+    color: #333; /* Dark gray */
+    margin-bottom: 10px;
+}
+
+.section1 p {
+    font-size: 16px;
+    color: #666; /* Medium gray */
+    line-height: 1.6;
+}
+/**************************************************/
+.section2 {
+   
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+    
+
+.section2 h2 {
+    text-align: center;
+    font-size: 70px;
+    color: #ad0505; /* Dark gray */
+    margin-bottom: 10px;
+}
+
+.section2 p {
+    text-align: center; /* Align the paragraph text to the center */
+    font-size: 25px;
+    max-width: 700px;
+    color: #666; /* Medium gray */
+    line-height: 1.6;
+    margin: 0 auto; /* Center the paragraph horizontally */
+}
+/****************************************************/
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.me_img {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.me_img img {
+    max-width: 120%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text3 {
+    flex: 2;
+    justify-content: center;
+    margin-left: 80px;
+}
+
+.text3 h2 {
+    font-size: 50px;
+    color: #ad0505;
+}
+
+.text3 p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Add some spacing between the paragraph and button */
+}
+
+.call_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ad0505;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.call_button:hover {
+    background-color: #8a0404;
+}
+/****************************************************/
+.section4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.text4 {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.text4 h2 {
+    font-size: 30px;
+    color: #333;
+}
+
+.text4 p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.img4 {
+    flex: 1;
+}
+
+.img4 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.call_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ad0505;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.call_button:hover {
+    background-color: #8a0404;
+}
+/***************************************************/
+.section5 {
+    text-align: center;
+    padding: 20px;
+}
+
+.section5 p {
+    font-size: 24px;
+    color: #333;
+}
+
+.call_detail {
+    display: inline-block;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.call_detail h1 {
+    font-size: 30px;
+    color: #ad0505;
+}
+
+.call_detail p {
+    font-size: 20px;
+    color: #666;
+}
+
+.feature-list {
+    text-align: left;
+}
+
+.feature-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+}
+
+.tick {
+    color: #ad0505;
+    margin-right: 10px;
+}
+
+.call_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ad0505;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.call_button:hover {
+    background-color: #8a0404;
+}
+
+/*************************************************/
+/* Footer Styling */
+footer {
+    background-color: #f5cece; /* Light gray */
+    color: #333; /* Dark gray text */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-footer img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+    margin: 30px;
+}
+
+.internal-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.internal-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.internal-links ul li:last-child {
+    margin-right: 0;
+}
+
+.internal-links ul li a {
+    color: #333; /* Dark gray text */
+    text-decoration: none;
+}
+
+.internal-links ul li a:hover {
+    color: #d61919; /* Dark red on hover */
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+/* Example of a media query for smaller devices */
+@media only screen and (max-width: 600px) {
+    /* CSS rules specific to smaller devices */
+}

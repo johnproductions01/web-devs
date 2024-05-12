@@ -1,0 +1,64 @@
+/* gallery.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: #fff;
+}
+
+.gallery {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.grid-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+}
+
+.grid-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+.grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.grid-item {
+  flex: 0 0 auto;
+  width: 250px; /* Adjust according to your design */
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Added transition */
+  position: relative;
+  border: 2px solid transparent; /* Added border */
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.grid-item:hover {
+  z-index: 1;
+  border-color: #fff; /* Change border color on hover */
+}
+
+.grid-item:hover img {
+  transform: scale(1.2); /* Adjust the scale factor */
+}
+
+.grid-item:hover img:hover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 40%;
+  max-height: auto;
+}
